@@ -6,7 +6,7 @@ Display Windows-style "Activate Linux" watermark on your desktop.
 
 ## Install
 
-[**Install Now**](dms://plugin/install/activate-linux)
+[Install Now](dms://plugin/install/activate-linux)
 
 Or manually:
 ```bash
