@@ -7,7 +7,7 @@ Display Windows-style "Activate Linux" watermark on your desktop.
 ## Install
 
 ```
-dms://plugin/install/activate-linux
+dms://plugin/install/activateLinux
 ```
 
 Or manually:
