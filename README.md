@@ -1,30 +1,29 @@
 # Activate Linux Watermark
 
-A DMS desktop widget that displays a watermark in the bottom-right corner of the screen, similar to the unactivated Windows watermark.
+Display Windows-style "Activate Linux" watermark on your desktop.
 
-![Screenshot](screenshot.png)
+<img src="screenshot.png" width="400" alt="Screenshot">
+
+## Install
+
+[<kbd>Install Now</kbd>](dms://plugin/install/activate-linux)
+
+Or manually:
+```bash
+git clone https://github.com/hthienloc/dms-activate-linux ~/.config/DankMaterialShell/plugins/activate-linux
+```
 
 ## Features
 
-- Displays "Activate Linux" watermark on desktop
-- Customizable text (toggle in settings)
-- Semi-transparent overlay
-- Runs as desktop widget in Dank Material Shell
-
-## Installation
-
-The plugin is located at:
-- Source: `~/Documents/GitHub/dms-activate-linux/`
-- Symlink: `~/.config/DankMaterialShell/plugins/dms-activate-linux/`
-
-Enable via DMS settings → Plugins.
+- **Desktop watermark** - Semi-transparent overlay in bottom-right corner
+- **Customizable text** - Toggle custom first/second line in settings
 
 ## Usage
 
-1. Enable the plugin in DMS
-2. Open plugin settings to customize text
-3. Toggle "Customize Text" to write your own message
+| Action | Result |
+|--------|--------|
+| Left click | Open settings |
 
 ## License
 
-MIT License - see LICENSE file.
+MIT
