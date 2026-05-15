@@ -33,14 +33,14 @@ DesktopPluginComponent {
 
                 Text {
                     text: firstLine
-                    color: "#50ffffff"
+                    color: Theme.surfaceVariantText
                     font.pointSize: 22
                     font.weight: Font.Light
                 }
 
                 Text {
                     text: secondLine
-                    color: "#50ffffff"
+                    color: Theme.surfaceVariantText
                     font.pointSize: 14
                 }
             }
