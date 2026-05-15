@@ -1,7 +1,7 @@
 import QtQuick
 import qs.Common
 import qs.Modules.Plugins
-import "./components"
+import "../dms-common"
 
 PluginSettings {
     id: root
@@ -9,6 +9,16 @@ PluginSettings {
 
     PluginHeader {
         title: "Activate Linux Settings"
+    }
+
+    SettingsCard {
+        SectionTitle { text: "Usage Guide" }
+        UsageGuide {
+            items: [
+                "This plugin displays a non-intrusive watermark on your desktop.",
+                "Enable <b>Customize Text</b> to override the default message."
+            ]
+        }
     }
 
     SettingsCard {

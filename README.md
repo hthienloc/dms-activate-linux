@@ -29,3 +29,5 @@ git clone https://github.com/hthienloc/dms-activate-linux ~/.config/DankMaterial
 ## License
 
 MIT
+## Dependencies
+- Requires [dms-common](https://github.com/hthienloc/dms-common) to be installed in the plugins directory.
