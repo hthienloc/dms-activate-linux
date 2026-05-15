@@ -6,7 +6,14 @@ Display Windows-style "Activate Linux" watermark on your desktop.
 
 ## Install
 
-```
+
+**Required:** This plugin requires [dms-common](https://github.com/hthienloc/dms-common) to be installed.
+
+```bash
+# 1. Install shared components
+git clone https://github.com/hthienloc/dms-common ~/.config/DankMaterialShell/plugins/dms-common
+
+# 2. Install this plugin
 dms://plugin/install/activateLinux
 ```
 
@@ -28,6 +35,4 @@ git clone https://github.com/hthienloc/dms-activate-linux ~/.config/DankMaterial
 
 ## License
 
-MIT
-## Dependencies
-- Requires [dms-common](https://github.com/hthienloc/dms-common) to be installed in the plugins directory.
+MIT(https://github.com/hthienloc/dms-common) to be installed in the plugins directory.
