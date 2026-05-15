@@ -2,6 +2,7 @@ import QtQuick
 import QtQuick.Layouts
 import qs.Common
 import qs.Modules.Plugins
+import "./components"
 
 DesktopPluginComponent {
     id: root
@@ -31,17 +32,15 @@ DesktopPluginComponent {
             ColumnLayout {
                 spacing: 2
 
-                Text {
+                WatermarkText {
                     text: firstLine
-                    color: Theme.surfaceVariantText
-                    font.pointSize: 22
+                    font.pixelSize: 22
                     font.weight: Font.Light
                 }
 
-                Text {
+                WatermarkText {
                     text: secondLine
-                    color: Theme.surfaceVariantText
-                    font.pointSize: 14
+                    font.pixelSize: 14
                 }
             }
         }
