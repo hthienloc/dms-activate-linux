@@ -32,15 +32,19 @@ DesktopPluginComponent {
             ColumnLayout {
                 spacing: 2
 
-                WatermarkText {
+                Text {
                     text: firstLine
-                    font.pixelSize: 22
+                    color: Theme.surfaceVariantText
+                    font.pointSize: 22
                     font.weight: Font.Light
+                    opacity: 0.4
                 }
 
-                WatermarkText {
+                Text {
                     text: secondLine
-                    font.pixelSize: 14
+                    color: Theme.surfaceVariantText
+                    font.pointSize: 14
+                    opacity: 0.4
                 }
             }
         }
