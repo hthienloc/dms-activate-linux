@@ -39,6 +39,9 @@ MIT
 
 ## Roadmap / TODO
 
-- [ ] Support for multiple screen positioning (top-left, top-right, etc.)
-- [ ] Customizable colors and opacity via the settings UI
-- [ ] Preset styles (inspired by Windows 10, Windows 11, and MacOS)
+- [ ] **Flexible Positioning**: Choose any corner or center of the screen for the watermark.
+- [ ] **Appearance Controls**: Fine-grained sliders for opacity, font weight, and custom HEX colors.
+- [ ] **Dynamic Variables**: Placeholders for `{distro}`, `{kernel}`, and `{uptime}` in the watermark text.
+- [ ] **Multi-Monitor Support**: Toggle visibility independently across connected displays.
+- [ ] **Style Presets**: Authentically modeled presets for Windows 10/11 and classic system watermarks.
+- [ ] **Non-Interactive Mode**: Ensure full input click-through so it never interferes with desktop usage.
