@@ -36,3 +36,9 @@ git clone https://github.com/hthienloc/dms-activate-linux ~/.config/DankMaterial
 ## License
 
 MIT
+
+## Roadmap / TODO
+
+- [ ] Support for multiple screen positioning (top-left, top-right, etc.)
+- [ ] Customizable colors and opacity via the settings UI
+- [ ] Preset styles (inspired by Windows 10, Windows 11, and MacOS)
