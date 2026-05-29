@@ -2,7 +2,7 @@ import QtQuick
 import QtQuick.Layouts
 import qs.Common
 import qs.Modules.Plugins
-import "../dms-common"
+import dms.common 1.0
 
 DesktopPluginComponent {
     id: root
@@ -12,12 +12,12 @@ DesktopPluginComponent {
 
     readonly property bool customizeText: pluginData.customizeText ?? false
     readonly property string firstLine: customizeText
-        ? (pluginData.firstLine || "Activate Linux")
-        : "Activate Linux"
+        ? (pluginData.firstLine || I18n.tr("Activate Linux"))
+        : I18n.tr("Activate Linux")
 
     readonly property string secondLine: customizeText
-        ? (pluginData.secondLine || "Go to Settings to activate Linux.")
-        : "Go to Settings to activate Linux."
+        ? (pluginData.secondLine || I18n.tr("Go to Settings to activate Linux."))
+        : I18n.tr("Go to Settings to activate Linux.")
 
     Rectangle {
         anchors.fill: parent

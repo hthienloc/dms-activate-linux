@@ -1,0 +1,5 @@
+module dms.common
+PluginAbout 1.0 PluginAbout.qml
+SectionTitle 1.0 SectionTitle.qml
+SettingsCard 1.0 SettingsCard.qml
+UsageGuide 1.0 UsageGuide.qml
