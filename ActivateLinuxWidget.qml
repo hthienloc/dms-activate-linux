@@ -2,7 +2,7 @@ import QtQuick
 import QtQuick.Layouts
 import qs.Common
 import qs.Modules.Plugins
-import dms.common 1.0
+import "./dms-common"
 
 DesktopPluginComponent {
     id: root
