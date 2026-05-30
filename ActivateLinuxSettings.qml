@@ -18,6 +18,36 @@ PluginSettings {
     }
 
     SettingsCard {
+        SectionTitle { text: I18n.tr("Watermark Appearance"); icon: "palette" }
+
+        SliderSetting {
+            settingKey: "watermarkOpacity"
+            label: I18n.tr("Opacity")
+            description: I18n.tr("Adjust the transparency of the watermark.")
+            defaultValue: 40
+            minimum: 0
+            maximum: 100
+            unit: "%"
+        }
+
+        SliderSetting {
+            settingKey: "firstLineSize"
+            label: I18n.tr("First Line Font Size")
+            defaultValue: 22
+            minimum: 8
+            maximum: 72
+        }
+
+        SliderSetting {
+            settingKey: "secondLineSize"
+            label: I18n.tr("Second Line Font Size")
+            defaultValue: 14
+            minimum: 8
+            maximum: 48
+        }
+    }
+
+    SettingsCard {
         SectionTitle { text: I18n.tr("Watermark Customization"); icon: "edit" }
 
         ToggleSetting {

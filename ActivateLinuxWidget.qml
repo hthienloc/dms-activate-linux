@@ -19,6 +19,10 @@ DesktopPluginComponent {
         ? (pluginData.secondLine || I18n.tr("Go to Settings to activate Linux."))
         : I18n.tr("Go to Settings to activate Linux.")
 
+    readonly property real watermarkOpacity: (pluginData.watermarkOpacity ?? 40) / 100.0
+    readonly property int firstLineSize: pluginData.firstLineSize ?? 22
+    readonly property int secondLineSize: pluginData.secondLineSize ?? 14
+
     Rectangle {
         anchors.fill: parent
         color: "transparent"
@@ -35,16 +39,16 @@ DesktopPluginComponent {
                 Text {
                     text: firstLine
                     color: Theme.surfaceVariantText
-                    font.pointSize: 22
+                    font.pointSize: firstLineSize
                     font.weight: Font.Light
-                    opacity: 0.4
+                    opacity: watermarkOpacity
                 }
 
                 Text {
                     text: secondLine
                     color: Theme.surfaceVariantText
-                    font.pointSize: 14
-                    opacity: 0.4
+                    font.pointSize: secondLineSize
+                    opacity: watermarkOpacity
                 }
             }
         }
