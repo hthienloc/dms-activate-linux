@@ -10,7 +10,7 @@ PluginSettings {
     SettingsCard {
         id: appearanceSection
         SectionTitle { 
-            text: I18n.tr("Watermark Appearance")
+            text: I18n.tr("Appearance")
             icon: "palette" 
             showReset: watermarkOpacity.isDirty || firstLineSize.isDirty || secondLineSize.isDirty
             onResetClicked: {
@@ -63,7 +63,7 @@ PluginSettings {
     SettingsCard {
         id: customizationSection
         SectionTitle { 
-            text: I18n.tr("Watermark Customization")
+            text: I18n.tr("Customization")
             icon: "edit" 
             showReset: customizeText.isDirty || firstLine.isDirty || secondLine.isDirty
             onResetClicked: {
