@@ -8,19 +8,20 @@ PluginSettings {
     pluginId: "activateLinux"
 
     SettingsCard {
-        SectionTitle { text: I18n.tr("Usage Guide"); icon: "menu_book" }
-        UsageGuide {
-            items: [
-                I18n.tr("This plugin displays a non-intrusive watermark on your desktop."),
-                I18n.tr("Enable <b>Customize Text</b> to override the default message.")
-            ]
+        id: appearanceSection
+        SectionTitle { 
+            text: I18n.tr("Watermark Appearance")
+            icon: "palette" 
+            showReset: watermarkOpacity.isDirty || firstLineSize.isDirty || secondLineSize.isDirty
+            onResetClicked: {
+                watermarkOpacity.resetToDefault();
+                firstLineSize.resetToDefault();
+                secondLineSize.resetToDefault();
+            }
         }
-    }
 
-    SettingsCard {
-        SectionTitle { text: I18n.tr("Watermark Appearance"); icon: "palette" }
-
-        SliderSetting {
+        SliderSettingPlus {
+            id: watermarkOpacity
             settingKey: "watermarkOpacity"
             label: I18n.tr("Opacity")
             description: I18n.tr("Adjust the transparency of the watermark.")
@@ -28,49 +29,95 @@ PluginSettings {
             minimum: 0
             maximum: 100
             unit: "%"
+            leftLabel: "0%"
+            rightLabel: "100%"
         }
 
-        SliderSetting {
+        Separator {}
+
+        SliderSettingPlus {
+            id: firstLineSize
             settingKey: "firstLineSize"
             label: I18n.tr("First Line Font Size")
             defaultValue: 22
             minimum: 8
             maximum: 72
+            leftLabel: "8"
+            rightLabel: "72"
         }
 
-        SliderSetting {
+        Separator {}
+
+        SliderSettingPlus {
+            id: secondLineSize
             settingKey: "secondLineSize"
             label: I18n.tr("Second Line Font Size")
             defaultValue: 14
             minimum: 8
             maximum: 48
+            leftLabel: "8"
+            rightLabel: "48"
         }
     }
 
     SettingsCard {
-        SectionTitle { text: I18n.tr("Watermark Customization"); icon: "edit" }
+        id: customizationSection
+        SectionTitle { 
+            text: I18n.tr("Watermark Customization")
+            icon: "edit" 
+            showReset: customizeText.isDirty || firstLine.isDirty || secondLine.isDirty
+            onResetClicked: {
+                customizeText.resetToDefault();
+                firstLine.resetToDefault();
+                secondLine.resetToDefault();
+            }
+        }
 
-        ToggleSetting {
+        ToggleSettingPlus {
+            id: customizeText
             settingKey: "customizeText"
             label: I18n.tr("Customize Text")
             description: I18n.tr("Enable manual override for the watermark text.")
             defaultValue: false
         }
 
-        StringSetting {
+        Separator { visible: customizeText.value }
+
+        StringSettingPlus {
+            id: firstLine
             settingKey: "firstLine"
             label: I18n.tr("First Line")
-            description: I18n.tr("Primary text displayed in the watermark.")
             defaultValue: "Activate Linux"
-            enabled: pluginData.customizeText ?? false
+            visible: customizeText.value
         }
 
-        StringSetting {
+        Separator { visible: customizeText.value }
+
+        StringSettingPlus {
+            id: secondLine
             settingKey: "secondLine"
             label: I18n.tr("Second Line")
-            description: I18n.tr("Subtext displayed in the watermark.")
             defaultValue: "Go to Settings to activate Linux."
-            enabled: pluginData.customizeText ?? false
+            visible: customizeText.value
+        }
+    }
+
+    SettingsCard {
+        SectionTitle { 
+            id: usageTitle
+            text: I18n.tr("Usage Guide")
+            icon: "menu_book" 
+            collapsible: true
+            settingKey: "usageGuideExpanded"
+        }
+
+        UsageGuide {
+            expanded: usageTitle.isExpanded
+            items: [
+                I18n.tr("This plugin displays a non-intrusive watermark on your desktop."),
+                I18n.tr("Enable <b>Customize Text</b> to override the default message."),
+                I18n.tr("You can adjust <b>font sizes</b> and <b>opacity</b> to match your background.")
+            ]
         }
     }
 
